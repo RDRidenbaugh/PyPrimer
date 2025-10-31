@@ -9,7 +9,6 @@ def name(protein_names):
                 continue
             else:
                 temp_split = line.split("\t")
-                total_split = line.replace("\t", " ").split(" ")
                 temp_value = []
                 if temp_split[1] == '':
                     temp_value = [["NA"]]
@@ -45,9 +44,10 @@ def name(protein_names):
     pn.close()
     return temp_dict
 
+# This function processes the orthogroups identfied by Broccoli. 
+# Modify the argument below to the path of your file location. 
 OG_names = name("../broccoli_gene_orthology/run1/dir_step3/table_OGs_protein_names.txt")
 
-# ('LOC124216920', 'XM_046622045.1', 'XP_046478001.1', 426, 1281, '1', 'bifunctional peptidase and arginyl-hydroxylase JMJD5 isoform X1', '32611', '35369', '+')
 def build_db_ft(path, feature):
     temp_dict = {}
     with open(path, "r") as f:
@@ -62,6 +62,10 @@ def build_db_ft(path, feature):
     f.close()
     return temp_dict
 
+# These functions assemble feature databases using NCBI feature tables. Each species requires its own line and unique variable name.
+# The object names below are used within several functions. If you wish to modify these objects (add/remove species), modifications will be required in downstream functions. 
+# This function can build databases using CDS or mRNA annotations. Modify the second argument for your desired output.
+# Modify the first argument below to the path of your file location.
 pine_db_ft = build_db_ft("../feature_table/GCF_021155775.1_iyNeoPine1.1_feature_table.txt", "CDS")
 leco_db_ft = build_db_ft("../feature_table/GCF_021901455.1_iyNeoLeco1.1_feature_table.txt", "CDS")
 virg_db_ft = build_db_ft("../feature_table/GCF_021901495.1_iyNeoVirg1.1_feature_table.txt", "CDS")
@@ -123,6 +127,10 @@ def build_db_exon(path, feature):
             XP_dict[key] = [temp_list_exon, temp_list_intron]
     return XP_dict
 
+# These functions assemble exon databases using NCBI GFF files. Each species requires its own line and unique variable name.
+# The object names below are used within several functions. If you wish to modify these objects (add/remove species), modifications will be required in downstream functions. 
+# This function can build databases using CDS or mRNA annotations. Modify the second argument for your desired output.
+# Modify the first argument below to the path of your file location.
 pine_db_exon = build_db_exon("../genome_gff/GCF_021155775.1_iyNeoPine1.1_genomic.gff", "CDS")
 leco_db_exon = build_db_exon("../genome_gff/GCF_021901455.1_iyNeoLeco1.1_genomic.gff", "CDS")
 virg_db_exon = build_db_exon("../genome_gff/GCF_021901495.1_iyNeoVirg1.1_genomic.gff", "CDS")
@@ -138,6 +146,8 @@ def fst_metadata(path):
             temp_dict[key] = (temp_split[1], temp_split[5], temp_split[2], temp_split[6], temp_split[4])
     return temp_dict
 
+# This function loads the optional population data for downstream filtering of orthogroups. 
+# Modify the argument below to the path of your file location.
 fst_db = fst_metadata("../HighSites_FILTERED_fst_GD_GC_pi_TD_RR_dxy_50kbp.txt")
 
 def longest(list, species):
@@ -221,6 +231,7 @@ def OG_isoform_filter(dict):
                 temp_dict[key] = temp_dict[key]+(longest(list[4], "simi"),)
     return temp_dict
 
+# This function filters isoforms by species within orthogroups. Only the longest isoform is retained. 
 OG_names = OG_isoform_filter(OG_names)
 
 def overlap(gene_start, gene_stop, fst_start, fst_stop):
@@ -242,6 +253,9 @@ def OG_fst_filter(OG, fst, cutoff):
                 continue
     return temp_dict
 
+# This function performs optional filtering of OGs using poulation data.
+# In the example dataset, genomewide FST between Lexington, KY Neodiprion lecontei and N. pinetum was used with a 0.75 cutoff.
+# Modify the third argument to change the FST cutoff value. 
 OG_names = OG_fst_filter(OG_names, fst_db, 0.75)
 
 def pairwise_intron(key, dif, mode, n):
@@ -309,6 +323,9 @@ def OG_intron(dict, dif, mode, n):
             continue
     return temp_dict
 
+# This function performs pairwise comparisons of intron length for all retained OGs. 
+# Three arguments can be modified in this function to fit your desired results. The first and third argument control your minimum and maximum for intron length differences.
+# The second argument controls the paireise search type, either between two focal species ("pl" for N. pinetum and N. lecontei) or all species ("all")
 intron = OG_intron(OG_names, 100, "pl", 1100)
 print(len(intron))
 
@@ -349,4 +366,6 @@ def intron_output(dict, path):
                     f.write(str(s)+"\n")
         f.close()
 
+# This function outputs the results of the pairwise search. The length of each intron, for each species, is output in a seperate text file for each retained OG.
+# Modify the argument below to the path of your file location.
 intron_output(intron, "../intron_out/")
