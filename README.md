@@ -1,5 +1,5 @@
 
-
+```
  ███████████             ███████████             ███                                    
 ░░███░░░░░███           ░░███░░░░░███           ░░░                                     
  ░███    ░███ █████ ████ ░███    ░███ ████████  ████  █████████████    ██████  ████████ 
@@ -11,7 +11,7 @@
                ███ ░███                                                                 
               ░░██████                                                                  
                ░░░░░░                                                                   
-
+```
 
 PyPrimer is bioinformatic pipeline designed to identify intron length variation between multiple species for the purpose of designing diagnostic multiplex PCR primers. Originally implemented in *Neodiprion* sawflies, the methodology can be applied to any system with a NCBI annotated reference genome.
 
