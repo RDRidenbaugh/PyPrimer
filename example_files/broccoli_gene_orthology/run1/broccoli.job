@@ -1,0 +1,21 @@
+#!/bin/sh
+#SBATCH -t 14-00:00:00
+#SBATCH --job-name=broccoli
+#SBATCH -n 4
+#SBATCH -p normal
+#SBATCH --account=coa_cli242_uksr
+#SBATCH --mail-type ALL
+#SBATCH --mail-user rdri228@uky.edu
+#SBATCH --error=SLURM_JOB_%j.err
+#SBATCH --output=SLURM_JOB_%j.out
+
+echo "loading Miniconda3"
+module load Miniconda3
+module load ccs/conda/python/3.9.6
+echo "sourcing conda shell"
+source /mnt/gpfs3_amd/share/apps/amd/Miniconda3/etc/profile.d/conda.sh
+echo "activating broccoli conda env"
+conda activate ete3
+
+cd ../broccoli
+python ~/scratch/bin/broccoli/broccoli.py -dir ../proteome -ext ".faa" -phylogenies ml -threads 4

@@ -1,0 +1,6 @@
+#species_file	nb_phylo	nb_NO_phylo	nb_empty_ali_ali	nb_pbm_tree
+GCF_021155775.1_iyNeoPine1.1_protein.faa	7680	4010	0	0
+GCF_021901455.1_iyNeoLeco1.1_protein.faa	7691	4009	0	0
+GCF_021901495.1_iyNeoVirg1.1_protein.faa	7620	3986	0	0
+GCF_021155785.1_iyNeoFabr1.1_protein.faa	7549	3993	0	0
+GCF_021155765.1_iyDipSimi1.1_protein.faa	7102	3867	1	0

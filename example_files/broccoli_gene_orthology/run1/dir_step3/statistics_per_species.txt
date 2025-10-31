@@ -1,0 +1,6 @@
+#species	perc_prot_assigned nb_prot_assigned
+GCF_021155775.1_iyNeoPine1.1_protein.faa	243.9	28517
+GCF_021901455.1_iyNeoLeco1.1_protein.faa	242.4	28376
+GCF_021901495.1_iyNeoVirg1.1_protein.faa	237.3	27540
+GCF_021155785.1_iyNeoFabr1.1_protein.faa	236.1	27251
+GCF_021155765.1_iyDipSimi1.1_protein.faa	177.5	19468

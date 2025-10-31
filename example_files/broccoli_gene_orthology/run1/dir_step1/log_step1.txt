@@ -1,0 +1,6 @@
+#index	file_name	nb_initial	nb_final
+0	GCF_021155775.1_iyNeoPine1.1_protein.faa	28705	11692
+1	GCF_021901455.1_iyNeoLeco1.1_protein.faa	28581	11705
+2	GCF_021901495.1_iyNeoVirg1.1_protein.faa	27752	11608
+3	GCF_021155785.1_iyNeoFabr1.1_protein.faa	27443	11543
+4	GCF_021155765.1_iyDipSimi1.1_protein.faa	20442	10969
