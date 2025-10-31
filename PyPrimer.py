@@ -46,7 +46,7 @@ def name(protein_names):
 
 # This function processes the orthogroups identfied by Broccoli. 
 # Modify the argument below to the path of your file location. 
-OG_names = name("../broccoli_gene_orthology/run1/dir_step3/table_OGs_protein_names.txt")
+OG_names = name("example_files/broccoli_gene_orthology/run1/dir_step3/table_OGs_protein_names.txt")
 
 def build_db_ft(path, feature):
     temp_dict = {}
@@ -66,11 +66,11 @@ def build_db_ft(path, feature):
 # The object names below are used within several functions. If you wish to modify these objects (add/remove species), modifications will be required in downstream functions. 
 # This function can build databases using CDS or mRNA annotations. Modify the second argument for your desired output.
 # Modify the first argument below to the path of your file location.
-pine_db_ft = build_db_ft("../feature_table/GCF_021155775.1_iyNeoPine1.1_feature_table.txt", "CDS")
-leco_db_ft = build_db_ft("../feature_table/GCF_021901455.1_iyNeoLeco1.1_feature_table.txt", "CDS")
-virg_db_ft = build_db_ft("../feature_table/GCF_021901495.1_iyNeoVirg1.1_feature_table.txt", "CDS")
-fabr_db_ft = build_db_ft("../feature_table/GCF_021155785.1_iyNeoFabr1.1_feature_table.txt", "CDS")
-simi_db_ft = build_db_ft("../feature_table/GCF_021155765.1_iyDipSimi1.1_feature_table.txt", "CDS")
+pine_db_ft = build_db_ft("example_files/feature_table/GCF_021155775.1_iyNeoPine1.1_feature_table.txt", "CDS")
+leco_db_ft = build_db_ft("example_files/feature_table/GCF_021901455.1_iyNeoLeco1.1_feature_table.txt", "CDS")
+virg_db_ft = build_db_ft("example_files/feature_table/GCF_021901495.1_iyNeoVirg1.1_feature_table.txt", "CDS")
+fabr_db_ft = build_db_ft("example_files/feature_table/GCF_021155785.1_iyNeoFabr1.1_feature_table.txt", "CDS")
+simi_db_ft = build_db_ft("example_files/feature_table/GCF_021155765.1_iyDipSimi1.1_feature_table.txt", "CDS")
 
 def build_db_exon(path, feature):
     XP_dict = {}
@@ -131,11 +131,11 @@ def build_db_exon(path, feature):
 # The object names below are used within several functions. If you wish to modify these objects (add/remove species), modifications will be required in downstream functions. 
 # This function can build databases using CDS or mRNA annotations. Modify the second argument for your desired output.
 # Modify the first argument below to the path of your file location.
-pine_db_exon = build_db_exon("../genome_gff/GCF_021155775.1_iyNeoPine1.1_genomic.gff", "CDS")
-leco_db_exon = build_db_exon("../genome_gff/GCF_021901455.1_iyNeoLeco1.1_genomic.gff", "CDS")
-virg_db_exon = build_db_exon("../genome_gff/GCF_021901495.1_iyNeoVirg1.1_genomic.gff", "CDS")
-fabr_db_exon = build_db_exon("../genome_gff/GCF_021155785.1_iyNeoFabr1.1_genomic.gff", "CDS")
-simi_db_exon = build_db_exon("../genome_gff/GCF_021155765.1_iyDipSimi1.1_genomic.gff", "CDS")
+pine_db_exon = build_db_exon("example_files/genome_gff/GCF_021155775.1_iyNeoPine1.1_genomic.gff", "CDS")
+leco_db_exon = build_db_exon("example_files/genome_gff/GCF_021901455.1_iyNeoLeco1.1_genomic.gff", "CDS")
+virg_db_exon = build_db_exon("example_files/genome_gff/GCF_021901495.1_iyNeoVirg1.1_genomic.gff", "CDS")
+fabr_db_exon = build_db_exon("example_files/genome_gff/GCF_021155785.1_iyNeoFabr1.1_genomic.gff", "CDS")
+simi_db_exon = build_db_exon("example_files/genome_gff/GCF_021155765.1_iyDipSimi1.1_genomic.gff", "CDS")
 
 def fst_metadata(path):
     temp_dict = {}
@@ -148,7 +148,7 @@ def fst_metadata(path):
 
 # This function loads the optional population data for downstream filtering of orthogroups. 
 # Modify the argument below to the path of your file location.
-fst_db = fst_metadata("../HighSites_FILTERED_fst_GD_GC_pi_TD_RR_dxy_50kbp.txt")
+fst_db = fst_metadata("example_files/HighSites_FILTERED_fst_GD_GC_pi_TD_RR_dxy_50kbp.txt")
 
 def longest(list, species):
     if species == "pine":
@@ -327,7 +327,6 @@ def OG_intron(dict, dif, mode, n):
 # Three arguments can be modified in this function to fit your desired results. The first and third argument control your minimum and maximum for intron length differences.
 # The second argument controls the paireise search type, either between two focal species ("pl" for N. pinetum and N. lecontei) or all species ("all")
 intron = OG_intron(OG_names, 100, "pl", 1100)
-print(len(intron))
 
 def intron_output(dict, path):
     for key in dict:
@@ -368,4 +367,4 @@ def intron_output(dict, path):
 
 # This function outputs the results of the pairwise search. The length of each intron, for each species, is output in a seperate text file for each retained OG.
 # Modify the argument below to the path of your file location.
-intron_output(intron, "../intron_out/")
+intron_output(intron, "example_files/PyPrimer_out/")
