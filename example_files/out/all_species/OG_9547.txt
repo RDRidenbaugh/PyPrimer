@@ -1,0 +1,6 @@
+# OG_9547	LOC124217569	broad-complex core protein isoforms 1/2/3/4/5-like	NA
+pine	XP_046479360.1	601	224
+leco	XP_015510787.1	601	224
+virg	XP_046617569.1	601	224
+fabr	XP_046423298.1	601	224
+simi	XP_046743855.1	802	193

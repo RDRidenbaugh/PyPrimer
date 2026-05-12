@@ -1,0 +1,6 @@
+# OG_3488	LOC124221473	tubulin polymerization-promoting protein homolog	NA
+pine	XP_046487498.1	749	5241
+leco	XP_015521829.2	749	5219
+virg	XP_046624982.1	746	5232
+fabr	XP_046431210.1	746	5185
+simi	XP_046749896.1	629	3058

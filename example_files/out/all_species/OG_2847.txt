@@ -1,0 +1,6 @@
+# OG_2847	LOC124217078	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial	NA
+pine	XP_046478311.1	404	181	135
+leco	XP_015514389.1	404	181	135
+virg	XP_046615705.1	404	181	135
+fabr	XP_046421531.1	401	181	135
+simi	XP_046743942.1	282	217	134

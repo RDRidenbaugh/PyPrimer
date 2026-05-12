@@ -1,0 +1,6 @@
+# OG_10833	LOC124223138	putative inorganic phosphate cotransporter	NA
+pine	XP_046490824.1	593	648
+leco	XP_015517458.2	593	646
+virg	XP_046628021.1	593	646
+fabr	XP_046434068.1	593	647
+simi	XP_046750762.1	1398	849

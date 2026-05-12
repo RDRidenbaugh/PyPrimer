@@ -1,0 +1,6 @@
+# OG_10372	LOC124221308	membrane-associated progesterone receptor component 1	NA
+pine	XP_046487150.1	1776	632
+leco	XP_015509767.1	1777	632
+virg	XP_046624082.1	1780	632
+fabr	XP_046430415.1	1781	632
+simi	XP_046747917.1	1672	790

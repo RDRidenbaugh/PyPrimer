@@ -1,0 +1,6 @@
+# OG_9193	LOC124215962	insulin-like growth factor-binding protein complex acid labile subunit	NA
+pine	XP_046475901.1	307	651	99	75	576
+leco	XP_015516566.2	307	651	99	75	576
+virg	XP_046613386.1	308	650	100	75	577
+fabr	XP_046419786.1	308	651	100	75	577
+simi	XP_046741516.1	297	606	106	75	212

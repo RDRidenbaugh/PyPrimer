@@ -1,0 +1,6 @@
+# OG_7065	LOC124220700	small glutamine-rich tetratricopeptide repeat-containing protein alpha-like	NA
+pine	XP_046485926.1	300	189
+leco	XP_015510678.1	299	189
+virg	XP_046623240.1	300	189
+fabr	XP_046429262.1	300	189
+simi	XP_046747238.1	164	169

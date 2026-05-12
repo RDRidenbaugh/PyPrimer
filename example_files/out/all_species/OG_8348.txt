@@ -1,0 +1,6 @@
+# OG_8348	LOC124212190	RNA 5'-monophosphate methyltransferase	NA
+pine	XP_046467990.1	255
+leco	XP_015512565.2	251
+virg	XP_046605938.1	251
+fabr	XP_046412731.1	251
+simi	XP_046737207.1	678

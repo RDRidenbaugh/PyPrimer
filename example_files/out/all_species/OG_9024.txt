@@ -1,0 +1,6 @@
+# OG_9024	LOC124215176	leucine-rich repeat-containing protein 47-like	NA
+pine	XP_046474195.1	132	514
+leco	XP_015513397.2	132	514
+virg	XP_046611616.1	132	617
+fabr	XP_046418411.1	132	617
+simi	XP_046739334.1	143	577

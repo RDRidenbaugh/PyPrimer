@@ -1,0 +1,6 @@
+# OG_6724	LOC124219538	dual serine/threonine and tyrosine protein kinase-like isoform X1	NA
+pine	XP_046483193.1	789	219
+leco	XP_015510018.1	789	219
+virg	XP_046620660.1	787	219
+fabr	XP_046425315.1	789	219
+simi	XP_046745327.1	1057	203

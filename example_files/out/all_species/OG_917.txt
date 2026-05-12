@@ -1,0 +1,6 @@
+# OG_917	LOC124210705	NADH dehydrogenase [ubiquinone] flavoprotein 2, mitochondrial isoform X1	NA
+pine	XP_046464914.1	257	83	118
+leco	XP_046585861.1	257	83	118
+virg	XP_046624969.1	257	83	118
+fabr	XP_046409579.1	257	83	118
+simi	XP_046753271.1	86	83	118

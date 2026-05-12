@@ -1,0 +1,6 @@
+# OG_6052	LOC124216904	solute carrier family 2, facilitated glucose transporter member 1-like isoform X1	NA
+pine	XP_046477955.1	29716	441	486	144
+leco	XP_046592167.1	28577	441	486	144
+virg	XP_046615249.1	28097	445	486	144
+fabr	XP_046419717.1	27912	442	486	144
+simi	XP_046743697.1	28449	439	155	157

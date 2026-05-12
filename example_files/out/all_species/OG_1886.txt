@@ -1,0 +1,6 @@
+# OG_1886	LOC124211212	leucine-rich repeat-containing protein 45-like	NA
+pine	XP_046465997.1	514	454
+leco	XP_015509324.2	514	454
+virg	XP_046603640.1	518	454
+fabr	XP_046410373.1	513	454
+simi	XP_046735603.1	509	243

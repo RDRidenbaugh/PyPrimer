@@ -1,0 +1,6 @@
+# OG_1080	LOC124223924	serine/threonine-protein phosphatase 4 regulatory subunit 3 isoform X1	NA
+pine	XP_046492281.1	332	93	86	230
+leco	XP_046600691.1	332	93	86	230
+virg	XP_046627059.1	332	93	86	230
+fabr	XP_046433797.1	328	93	86	230
+simi	XP_046750638.1	112	92	86	222

@@ -1,0 +1,6 @@
+# OG_187	LOC124216243	U4/U6.U5 small nuclear ribonucleoprotein 27 kDa protein isoform X1	NA
+pine	XP_046476482.1	266	626
+leco	XP_015519986.1	266	626
+virg	XP_046613961.1	266	630
+fabr	XP_046420186.1	266	879
+simi	XP_046744135.1	256	632

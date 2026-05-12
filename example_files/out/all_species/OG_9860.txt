@@ -1,0 +1,6 @@
+# OG_9860	LOC124218990	beta-1,4-N-acetylgalactosaminyltransferase bre-4-like	NA
+pine	XP_046481980.1	555
+leco	XP_015510628.1	555
+virg	XP_046620145.1	542
+fabr	XP_046426369.1	546
+simi	XP_046747517.1	820

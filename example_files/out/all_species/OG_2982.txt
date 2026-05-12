@@ -1,0 +1,6 @@
+# OG_2982	LOC124216495	signal recognition particle 19 kDa protein	NA
+pine	XP_046477018.1	953
+leco	XP_015518017.1	958
+virg	XP_046617624.1	952
+fabr	XP_046420626.1	951
+simi	XP_046740584.1	532

@@ -1,0 +1,6 @@
+# OG_9062	LOC124215329	transmembrane emp24 domain-containing protein 2	NA
+pine	XP_046474548.1	471	312
+leco	XP_015522303.1	471	312
+virg	XP_046612221.1	471	312
+fabr	XP_046418653.1	471	312
+simi	XP_046738558.1	473	161

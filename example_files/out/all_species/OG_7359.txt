@@ -1,0 +1,6 @@
+# OG_7359	LOC124221873	mitochondrial inner membrane protease subunit 1 isoform X1	NA
+pine	XP_046488211.1	567	249
+leco	XP_015517740.1	567	249
+virg	XP_046625356.1	567	249
+fabr	XP_046431669.1	567	249
+simi	XP_046748608.1	705	2045

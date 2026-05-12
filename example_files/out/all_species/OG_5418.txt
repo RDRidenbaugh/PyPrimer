@@ -1,0 +1,6 @@
+# OG_5418	LOC124214746	facilitated trehalose transporter Tret1-2 homolog isoform X1	NA
+pine	XP_046473315.1	7246	1011
+leco	XP_046590095.1	7188	1011
+virg	XP_046612475.1	7672	739
+fabr	XP_046416644.1	7173	739
+simi	XP_046737664.1	9856	1094

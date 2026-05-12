@@ -1,0 +1,6 @@
+# OG_5157	LOC124213833	fibroblast growth factor receptor substrate 2	NA
+pine	XP_046471465.1	121	456
+leco	XP_046589542.1	111	141
+virg	XP_046609676.1	111	141
+fabr	XP_046418382.1	111	141
+simi	XP_046740068.1	112	141

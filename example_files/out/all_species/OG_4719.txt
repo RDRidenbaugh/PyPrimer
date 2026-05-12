@@ -1,0 +1,6 @@
+# OG_4719	LOC124212359	N-acetylgalactosaminyltransferase 6-like isoform X1	NA
+pine	XP_046468237.1	394
+leco	XP_015516992.2	394
+virg	XP_046608131.1	394
+fabr	XP_046412809.1	394
+simi	XP_046737297.1	541

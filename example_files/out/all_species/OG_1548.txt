@@ -1,0 +1,6 @@
+# OG_1548	LOC124211809	eukaryotic translation initiation factor 3 subunit K isoform X1	NA
+pine	XP_046467207.1	180	279	642
+leco	XP_046588220.1	182	279	641
+virg	XP_046606497.1	181	278	639
+fabr	XP_046410072.1	181	278	639
+simi	XP_046734042.1	192	395	586

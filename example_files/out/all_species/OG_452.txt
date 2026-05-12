@@ -1,0 +1,6 @@
+# OG_452	LOC124224660	ectonucleotide pyrophosphatase/phosphodiesterase family member 5-like isoform X1	NA
+pine	XP_046492648.1	146	84	78	142	81	486	174
+leco	XP_015525019.1	146	84	78	142	81	486	174
+virg	XP_046617997.1	146	84	78	142	81	486	174
+fabr	XP_046435226.1	146	84	78	142	81	486	174
+simi	XP_046738698.1	147	84	77	107	81	330	174

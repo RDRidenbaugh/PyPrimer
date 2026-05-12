@@ -1,0 +1,6 @@
+# OG_8088	LOC124211174	phosphate carrier protein, mitochondrial-like	NA
+pine	XP_046465937.1	757	71
+leco	XP_015509426.2	685	71
+virg	XP_046608124.1	724	71
+fabr	XP_046414681.1	725	71
+simi	XP_046734930.1	68	74

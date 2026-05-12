@@ -1,0 +1,6 @@
+# OG_367	LOC124215877	eukaryotic translation initiation factor 5	NA
+pine	XP_046475703.1	483	212
+leco	XP_046594422.1	483	212
+virg	XP_046616802.1	482	212
+fabr	XP_046421077.1	482	212
+simi	XP_046743073.1	271	214

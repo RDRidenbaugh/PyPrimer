@@ -1,0 +1,6 @@
+# OG_9329	LOC124216633	lipid storage droplets surface-binding protein 2-like	NA
+pine	XP_046477355.1	84	385
+leco	XP_046593871.1	84	385
+virg	XP_046613682.1	73	385
+fabr	XP_046422013.1	84	385
+simi	XP_046741043.1	83	761

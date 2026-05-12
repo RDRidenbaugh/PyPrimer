@@ -1,0 +1,6 @@
+# OG_4496	LOC124211504	hemolymph lipopolysaccharide-binding protein-like	NA
+pine	XP_046466573.1	969	123
+leco	XP_015523434.2	968	123
+virg	XP_046604452.1	971	123
+fabr	XP_046411837.1	239	123
+simi	XP_046754097.1	897	139

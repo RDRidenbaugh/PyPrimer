@@ -1,0 +1,6 @@
+# OG_9521	LOC124217417	dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex, mitochondrial	NA
+pine	XP_046478907.1	599	256	224	163	107
+leco	XP_015516370.1	600	256	224	163	107
+virg	XP_046611613.1	598	256	224	163	106
+fabr	XP_046420094.1	598	256	220	163	106
+simi	XP_046749048.1	632	257	151	304	101

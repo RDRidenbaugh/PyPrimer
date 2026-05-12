@@ -1,0 +1,6 @@
+# OG_9	LOC124214823	trafficking protein particle complex subunit 2-like protein	NA
+pine	XP_046473449.1	756	231	122	74
+leco	XP_046590493.1	761	231	122	74
+virg	XP_046611187.1	701	231	122	74
+fabr	XP_046417233.1	702	231	119	74
+simi	XP_046737957.1	821	256	88	74

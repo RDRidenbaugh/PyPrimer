@@ -1,0 +1,6 @@
+# OG_10913	LOC124223487	probable small nuclear ribonucleoprotein Sm D2	NA
+pine	XP_046491447.1	241	89
+leco	XP_015512632.2	241	89
+virg	XP_046629453.1	241	87
+fabr	XP_046435596.1	241	87
+simi	XP_046752156.1	466	88

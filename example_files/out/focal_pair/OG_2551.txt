@@ -1,0 +1,6 @@
+# OG_2551	LOC124215006	transmembrane protein 70 homolog, mitochondrial	0.757786
+pine	XP_046473799.1	68	838
+leco	XP_015509655.1	68	690
+virg	XP_046611865.1	68	838
+fabr	XP_046418331.1	68	837
+simi	XP_046738012.1	73	641

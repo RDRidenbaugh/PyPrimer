@@ -1,0 +1,6 @@
+# OG_1583	LOC124212103	non-structural maintenance of chromosomes element 3 homolog isoform X1	NA
+pine	XP_046467929.1	95	120	237	177
+leco	XP_046602380.1	95	120	237	177
+virg	XP_046607000.1	95	120	237	176
+fabr	XP_046422219.1	95	120	237	177
+simi	XP_046750777.1	94	130	255	299

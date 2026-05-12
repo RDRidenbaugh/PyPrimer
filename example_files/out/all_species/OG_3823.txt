@@ -1,0 +1,6 @@
+# OG_3823	LOC124223780	U11/U12 small nuclear ribonucleoprotein 25 kDa protein isoform X1	NA
+pine	XP_046491986.1	655	85
+leco	XP_046602051.1	687	85
+virg	XP_046629161.1	660	85
+fabr	XP_046435212.1	1006	85
+simi	XP_046752119.1	609	108

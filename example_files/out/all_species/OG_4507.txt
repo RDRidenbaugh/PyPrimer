@@ -1,0 +1,6 @@
+# OG_4507	LOC124211536	zinc finger and SCAN domain-containing protein 10-like isoform X1	NA
+pine	XP_046466647.1	98	107	310
+leco	XP_015510845.2	98	107	310
+virg	XP_046606447.1	98	107	310
+fabr	XP_046411182.1	98	107	310
+simi	XP_046736879.1	98	103	206

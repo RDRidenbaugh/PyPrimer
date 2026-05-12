@@ -1,0 +1,6 @@
+# OG_7684	LOC124223124	putative inorganic phosphate cotransporter isoform X1	NA
+pine	XP_046490806.1	5287	521
+leco	XP_015517463.1	5298	521
+virg	XP_046627976.1	5365	521
+fabr	XP_046434159.1	5307	521
+simi	XP_046750760.1	4520	917

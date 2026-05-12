@@ -1,0 +1,6 @@
+# OG_490	LOC124220544	translocon-associated protein subunit beta	NA
+pine	XP_046485563.1	813	85
+leco	XP_046597384.1	814	85
+virg	XP_046618486.1	812	85
+fabr	XP_046428507.1	832	85
+simi	XP_046747083.1	599	85

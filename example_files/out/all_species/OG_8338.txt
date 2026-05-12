@@ -1,0 +1,6 @@
+# OG_8338	LOC124212154	elongation of very long chain fatty acids protein 7-like	NA
+pine	XP_046467904.1	78	1114
+leco	XP_015521540.1	78	745
+virg	XP_046605150.1	78	10239
+fabr	XP_046410922.1	78	862
+simi	XP_046733761.1	78	758

@@ -1,0 +1,6 @@
+# OG_9423	LOC124217029	putative ATP synthase subunit f, mitochondrial	NA
+pine	XP_046478225.1	79	428	88
+leco	XP_015512232.1	79	428	88
+virg	XP_046614133.1	79	428	88
+fabr	XP_046423161.1	79	429	88
+simi	XP_046740774.1	79	628	88

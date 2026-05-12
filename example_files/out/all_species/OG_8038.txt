@@ -1,0 +1,6 @@
+# OG_8038	LOC124210917	leucine-rich repeat and fibronectin type III domain-containing protein 1-like protein	NA
+pine	XP_046465313.1	9732	60	597	72	207	179
+leco	XP_015519315.1	9757	60	597	72	207	178
+virg	XP_046603776.1	9792	60	596	72	207	178
+fabr	XP_046410368.1	9723	60	597	72	207	178
+simi	XP_046735252.1	10528	60	667	73	560	169

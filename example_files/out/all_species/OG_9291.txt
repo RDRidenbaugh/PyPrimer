@@ -1,0 +1,6 @@
+# OG_9291	LOC124216450	glutathione-specific gamma-glutamylcyclotransferase 1	NA
+pine	XP_046476939.1	6690	253	88
+leco	XP_015514621.1	5751	253	88
+virg	XP_046617930.1	4466	253	88
+fabr	XP_046424254.1	4415	253	88
+simi	XP_046743288.1	6197	417	82

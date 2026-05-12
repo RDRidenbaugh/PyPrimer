@@ -1,0 +1,6 @@
+# OG_10723	LOC124222728	NPC intracellular cholesterol transporter 2 homolog a-like	NA
+pine	XP_046489943.1	468	331
+leco	XP_015514133.1	470	334
+virg	XP_046627237.1	469	334
+fabr	XP_046433474.1	455	330
+simi	XP_046751267.1	285	709

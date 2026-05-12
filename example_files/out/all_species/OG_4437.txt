@@ -1,0 +1,6 @@
+# OG_4437	LOC124211314	secretion-regulating guanine nucleotide exchange factor-like isoform X1	NA
+pine	XP_046466218.1	134	913	175	84
+leco	XP_015509842.2	134	913	175	84
+virg	XP_046607264.1	134	941	175	84
+fabr	XP_046413851.1	134	941	175	84
+simi	XP_046737046.1	156	558	180	93

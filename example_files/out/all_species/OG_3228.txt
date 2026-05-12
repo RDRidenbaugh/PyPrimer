@@ -1,0 +1,6 @@
+# OG_3228	LOC124219721	activator of basal transcription 1-like	NA
+pine	XP_046483672.1	504	79
+leco	XP_015516424.1	504	79
+virg	XP_046621037.1	502	79
+fabr	XP_046427544.1	505	79
+simi	XP_046746137.1	366	80

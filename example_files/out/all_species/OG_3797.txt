@@ -1,0 +1,6 @@
+# OG_3797	LOC124223624	biorientation of chromosomes in cell division protein 1-like 1	NA
+pine	XP_046491780.1	433	539
+leco	XP_015513556.1	433	539
+virg	XP_046628919.1	433	539
+fabr	XP_046435168.1	433	542
+simi	XP_046750772.1	261	272

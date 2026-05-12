@@ -1,0 +1,6 @@
+# OG_11009	LOC124223882	microsomal glutathione S-transferase 1-like	NA
+pine	XP_046492197.1	489
+leco	XP_015514441.1	828
+virg	XP_046629334.1	829
+fabr	XP_046435525.1	831
+simi	XP_046751645.1	524

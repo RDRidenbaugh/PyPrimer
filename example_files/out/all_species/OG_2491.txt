@@ -1,0 +1,6 @@
+# OG_2491	LOC124214594	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8, mitochondrial	NA
+pine	XP_046472966.1	700	511	127
+leco	XP_015513703.1	700	510	127
+virg	XP_046611068.1	700	512	127
+fabr	XP_046417827.1	700	503	127
+simi	XP_046738989.1	463	533	127

@@ -1,0 +1,6 @@
+# OG_7993	LOC124210707	diphosphoinositol polyphosphate phosphohydrolase 1	NA
+pine	XP_046464918.1	478	937
+leco	XP_015523185.1	481	937
+virg	XP_046625024.1	481	935
+fabr	XP_046409584.1	481	931
+simi	XP_046753779.1	465	799

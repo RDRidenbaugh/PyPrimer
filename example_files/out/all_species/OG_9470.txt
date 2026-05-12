@@ -1,0 +1,6 @@
+# OG_9470	LOC124217230	testis-specific serine/threonine-protein kinase 2-like	NA
+pine	XP_046478583.1	591	1012
+leco	XP_015516636.1	591	1012
+virg	XP_046613692.1	593	1015
+fabr	XP_046420392.1	593	1015
+simi	XP_046741070.1	311	1018

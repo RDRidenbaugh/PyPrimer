@@ -1,0 +1,6 @@
+# OG_1355	LOC124211144	lactosylceramide 4-alpha-galactosyltransferase-like isoform X1	NA
+pine	XP_046465875.1	555	545	95
+leco	XP_046586342.1	559	549	95
+virg	XP_046603703.1	561	548	95
+fabr	XP_046414478.1	557	549	95
+simi	XP_046735357.1	387	559	95

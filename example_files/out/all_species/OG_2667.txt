@@ -1,0 +1,6 @@
+# OG_2667	LOC124216153	nuclear nucleic acid-binding protein C1D	NA
+pine	XP_046476294.1	76
+leco	XP_015520921.1	76
+virg	XP_046613597.1	506
+fabr	XP_046420054.1	518
+simi	XP_046743206.1	76

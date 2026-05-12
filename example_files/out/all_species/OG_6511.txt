@@ -1,0 +1,6 @@
+# OG_6511	LOC124218820	galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase P	NA
+pine	XP_046481623.1	610	657	645
+leco	XP_015510656.1	609	717	646
+virg	XP_046621462.1	1191	757	645
+fabr	XP_046427530.1	880	657	646
+simi	XP_046746107.1	1207	471	445

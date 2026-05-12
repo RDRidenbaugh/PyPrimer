@@ -1,0 +1,6 @@
+# OG_4301	LOC124210831	sphingomyelin synthase-related protein 1-like isoform X1	NA
+pine	XP_046465222.1	480	118	76	87
+leco	XP_046593481.1	480	118	76	87
+virg	XP_046623756.1	666	118	76	87
+fabr	XP_046427554.1	666	118	76	87
+simi	XP_046745898.1	663	120	76	90

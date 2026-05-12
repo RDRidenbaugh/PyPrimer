@@ -1,0 +1,6 @@
+# OG_9782	LOC124218563	glycine-rich cell wall structural protein 1.8-like	NA
+pine	XP_046481072.1	1081
+leco	XP_015524316.1	1080
+virg	XP_046608403.1	1078
+fabr	XP_046416088.1	1079
+simi	XP_046739293.1	683

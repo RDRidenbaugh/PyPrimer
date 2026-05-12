@@ -1,0 +1,6 @@
+# OG_9398	LOC124216919	elongation of very long chain fatty acids protein 4-like	NA
+pine	XP_046477997.1	3664	769	980
+leco	XP_046595165.1	3680	769	982
+virg	XP_046615297.1	3682	778	988
+fabr	XP_046424332.1	3697	764	984
+simi	XP_046742161.1	2511	374	907

@@ -1,0 +1,6 @@
+# OG_262	LOC124216883	apoptosis regulatory protein Siva-like isoform X1	NA
+pine	XP_046477907.1	318	96	382
+leco	XP_015520080.1	318	96	382
+virg	XP_046615063.1	318	96	382
+fabr	XP_046421273.1	318	96	382
+simi	XP_046744224.1	313	76	232

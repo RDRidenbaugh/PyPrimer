@@ -1,0 +1,6 @@
+# OG_67	LOC124215539	probable phenylalanine--tRNA ligase, mitochondrial isoform X1	NA
+pine	XP_046475005.1	445	104	112
+leco	XP_015521258.2	445	104	112
+virg	XP_046611977.1	445	104	112
+fabr	XP_046415783.1	445	103	112
+simi	XP_046738485.1	154	111	124

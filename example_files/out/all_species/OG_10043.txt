@@ -1,0 +1,6 @@
+# OG_10043	LOC124219762	2-(3-amino-3-carboxypropyl)histidine synthase subunit 1	NA
+pine	XP_046483797.1	285	78	159
+leco	XP_015520716.1	285	78	159
+virg	XP_046621373.1	285	78	160
+fabr	XP_046429319.1	285	78	160
+simi	XP_046745760.1	126	78	159

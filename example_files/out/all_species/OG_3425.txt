@@ -1,0 +1,6 @@
+# OG_3425	LOC124221537	PHD finger protein rhinoceros-like	NA
+pine	XP_046487607.1	192
+leco	XP_015511469.1	192
+virg	XP_046624330.1	192
+fabr	XP_046432403.1	192
+simi	XP_046750331.1	86

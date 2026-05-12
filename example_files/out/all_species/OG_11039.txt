@@ -1,0 +1,6 @@
+# OG_11039	LOC124223976	putative peptidyl-prolyl cis-trans isomerase dodo	NA
+pine	XP_046492394.1	768	378
+leco	XP_015514143.1	768	378
+virg	XP_046627933.1	762	350
+fabr	XP_046434083.1	768	350
+simi	XP_046751038.1	726	478

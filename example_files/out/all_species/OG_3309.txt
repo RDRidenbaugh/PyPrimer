@@ -1,0 +1,6 @@
+# OG_3309	LOC124213776	vacuolar protein-sorting-associated protein 25 isoform X1	NA
+pine	XP_046471360.1	244	129	83
+leco	XP_046590165.1	242	129	83
+virg	XP_046622335.1	406	129	83
+fabr	XP_046430882.1	242	129	83
+simi	XP_046753530.1	399	129	83

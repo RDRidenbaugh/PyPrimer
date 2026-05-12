@@ -1,0 +1,6 @@
+# OG_6075	LOC124216970	3-galactosyl-N-acetylglucosaminide 4-alpha-L-fucosyltransferase FUT3-like isoform X1	NA
+pine	XP_046478104.1	1288	457
+leco	XP_015521586.1	1290	456
+virg	XP_046618093.1	1242	458
+fabr	XP_046424386.1	1264	456
+simi	XP_046740656.1	1560	99

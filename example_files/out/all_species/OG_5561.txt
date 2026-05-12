@@ -1,0 +1,6 @@
+# OG_5561	LOC124215304	protein-L-isoaspartate(D-aspartate) O-methyltransferase-like isoform X1	NA
+pine	XP_046474484.1	67	1200	244	408
+leco	XP_046591391.1	67	1190	244	408
+virg	XP_046612412.1	67	1204	230	408
+fabr	XP_046418846.1	67	1190	231	408
+simi	XP_046739549.1	200	1123	210	416

@@ -1,0 +1,6 @@
+# OG_1579	LOC124212561	craniofacial development protein 1 isoform X1	NA
+pine	XP_046468675.1	680	139
+leco	XP_046588144.1	680	139
+virg	XP_046606873.1	680	139
+fabr	XP_046412486.1	680	139
+simi	XP_046736256.1	186	118

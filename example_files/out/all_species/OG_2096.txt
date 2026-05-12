@@ -1,0 +1,6 @@
+# OG_2096	LOC124211992	NADH dehydrogenase [ubiquinone] iron-sulfur protein 3, mitochondrial	NA
+pine	XP_046467592.1	69	664	177	129
+leco	XP_015517417.1	69	664	177	129
+virg	XP_046606116.1	69	664	177	129
+fabr	XP_046413771.1	69	664	177	129
+simi	XP_046735093.1	69	225	179	130

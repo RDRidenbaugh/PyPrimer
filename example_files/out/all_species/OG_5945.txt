@@ -1,0 +1,6 @@
+# OG_5945	LOC124216577	arylalkylamine N-acetyltransferase-like 2 isoform X1	NA
+pine	XP_046477180.1	3202	850
+leco	XP_015516009.2	3328	848
+virg	XP_046614576.1	3328	856
+fabr	XP_046420740.1	3321	855
+simi	XP_046742177.1	3214	180

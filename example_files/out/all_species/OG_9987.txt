@@ -1,0 +1,6 @@
+# OG_9987	LOC124219514	5'-nucleotidase domain-containing protein 1	NA
+pine	XP_046483163.1	456
+leco	XP_015511480.2	456
+virg	XP_046619924.1	456
+fabr	XP_046425671.1	456
+simi	XP_046746570.1	344

@@ -1,0 +1,6 @@
+# OG_8949	LOC124214833	probable tRNA N6-adenosine threonylcarbamoyltransferase	NA
+pine	XP_046473465.1	528	557	81
+leco	XP_015524054.1	528	557	81
+virg	XP_046611129.1	528	553	81
+fabr	XP_046417744.1	528	554	81
+simi	XP_046738140.1	508	267	85

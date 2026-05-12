@@ -1,0 +1,6 @@
+# OG_9342	LOC124216666	circadian clock-controlled protein daywake-like	NA
+pine	XP_046477424.1	997	130
+leco	XP_015523617.1	1001	130
+virg	XP_046616327.1	996	130
+fabr	XP_046420973.1	991	130
+simi	XP_046743263.1	377	110

@@ -1,0 +1,6 @@
+# OG_3070	LOC124218992	haloacid dehalogenase-like hydrolase domain-containing 5	NA
+pine	XP_046481982.1	789	802
+leco	XP_015523261.1	789	799
+virg	XP_046619066.1	789	795
+fabr	XP_046425436.1	789	796
+simi	XP_046746182.1	794	1010

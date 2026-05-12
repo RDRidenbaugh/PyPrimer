@@ -1,0 +1,6 @@
+# OG_2873	LOC124217175	succinate dehydrogenase cytochrome b560 subunit, mitochondrial-like	NA
+pine	XP_046478493.1	92	1036	88	533
+leco	XP_015521807.2	92	1039	88	533
+virg	XP_046616120.1	92	1037	88	533
+fabr	XP_046424084.1	92	1040	88	533
+simi	XP_046743012.1	92	335	88	565

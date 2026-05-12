@@ -1,0 +1,6 @@
+# OG_8376	LOC124212285	Sjoegren syndrome nuclear autoantigen 1 homolog	NA
+pine	XP_046468131.1	90	805
+leco	XP_015517201.1	90	805
+virg	XP_046604833.1	90	803
+fabr	XP_046411392.1	90	804
+simi	XP_046736537.1	96	513

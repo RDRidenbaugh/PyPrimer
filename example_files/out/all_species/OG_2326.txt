@@ -1,0 +1,6 @@
+# OG_2326	LOC124214261	transcription initiation factor TFIID subunit 9	NA
+pine	XP_046472443.1	82	817
+leco	XP_015520419.1	82	817
+virg	XP_046609160.1	82	815
+fabr	XP_046417198.1	82	815
+simi	XP_046737647.1	82	285

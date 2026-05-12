@@ -1,0 +1,6 @@
+# OG_2903	LOC124217587	probable rRNA-processing protein EBP2 homolog	NA
+pine	XP_046479388.1	529
+leco	XP_015512501.1	529
+virg	XP_046616521.1	526
+fabr	XP_046421543.1	524
+simi	XP_046742804.1	650

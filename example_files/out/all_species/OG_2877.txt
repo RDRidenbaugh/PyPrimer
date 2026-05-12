@@ -1,0 +1,6 @@
+# OG_2877	LOC124217205	vitamin K epoxide reductase complex subunit 1	NA
+pine	XP_046478558.1	342	148
+leco	XP_015512123.1	342	148
+virg	XP_046616152.1	341	148
+fabr	XP_046422325.1	342	148
+simi	XP_046740367.1	453	125

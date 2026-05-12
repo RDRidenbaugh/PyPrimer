@@ -1,0 +1,6 @@
+# OG_2537	LOC124214644	structure-specific endonuclease subunit slx1	NA
+pine	XP_046473094.1	672	89
+leco	XP_015513357.2	672	89
+virg	XP_046611692.1	672	90
+fabr	XP_046417877.1	672	90
+simi	XP_046737804.1	898	91

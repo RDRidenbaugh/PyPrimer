@@ -1,0 +1,6 @@
+# OG_2493	LOC124214021	cleavage and polyadenylation specificity factor subunit 4	NA
+pine	XP_046471927.1	307	577	1354
+leco	XP_015524027.1	307	582	978
+virg	XP_046611115.1	307	582	1358
+fabr	XP_046418199.1	307	582	1363
+simi	XP_046739524.1	306	666	621

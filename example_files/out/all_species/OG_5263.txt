@@ -1,0 +1,6 @@
+# OG_5263	LOC124214195	zinc finger protein 3 homolog isoform X1	NA
+pine	XP_046472318.1	379
+leco	XP_015516135.2	379
+virg	XP_046610489.1	377
+fabr	XP_046416681.1	379
+simi	XP_046738864.1	196

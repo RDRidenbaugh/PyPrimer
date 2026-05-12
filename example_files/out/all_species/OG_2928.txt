@@ -1,0 +1,6 @@
+# OG_2928	LOC124217766	iron-sulfur cluster assembly enzyme ISCU, mitochondrial	NA
+pine	XP_046479755.1	508	79	815
+leco	XP_015523059.2	508	79	829
+virg	XP_046616831.1	510	79	832
+fabr	XP_046423227.1	510	79	832
+simi	XP_046744162.1	210	79	627

@@ -1,0 +1,6 @@
+# OG_6656	LOC124219263	heterogeneous nuclear ribonucleoprotein A3 homolog 2-like isoform X1	NA
+pine	XP_046482550.1	675	3233	505
+leco	XP_015521836.2	675	3240	505
+virg	XP_046620213.1	672	1980	505
+fabr	XP_046426140.1	672	1979	505
+simi	XP_046746338.1	697	3783	702

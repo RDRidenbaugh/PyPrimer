@@ -1,0 +1,6 @@
+# OG_6296	LOC124217872	mitochondrial import inner membrane translocase subunit Tim10 B isoform X1	NA
+pine	XP_046479961.1	264	171
+leco	XP_015514588.1	265	171
+virg	XP_046615679.1	265	171
+fabr	XP_046424194.1	265	171
+simi	XP_046743939.1	109	159

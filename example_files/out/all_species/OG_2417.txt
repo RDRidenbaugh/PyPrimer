@@ -1,0 +1,6 @@
+# OG_2417	LOC124214727	protein prenyltransferase alpha subunit repeat-containing protein 1	NA
+pine	XP_046473283.1	1235
+leco	XP_046590924.1	1051
+virg	XP_046610275.1	1348
+fabr	XP_046416551.1	1234
+simi	XP_046738654.1	391

@@ -1,0 +1,6 @@
+# OG_3165	LOC124219866	coiled-coil-helix-coiled-coil-helix domain-containing protein 2	NA
+pine	XP_046484027.1	243	366
+leco	XP_015523278.2	243	366
+virg	XP_046620251.1	245	366
+fabr	XP_046426567.1	243	366
+simi	XP_046745721.1	239	264

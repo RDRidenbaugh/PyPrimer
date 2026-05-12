@@ -1,0 +1,6 @@
+# OG_8060	LOC124211050	U2 small nuclear ribonucleoprotein auxiliary factor 35 kDa subunit-related protein 2	NA
+pine	XP_046465658.1	985
+leco	XP_015509803.1	985
+virg	XP_046606646.1	985
+fabr	XP_046411481.1	984
+simi	XP_046735565.1	772

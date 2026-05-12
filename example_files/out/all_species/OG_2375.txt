@@ -1,0 +1,6 @@
+# OG_2375	LOC124214023	ATP synthase subunit g, mitochondrial-like	NA
+pine	XP_046471929.1	852
+leco	XP_015511735.1	850
+virg	XP_046609763.1	851
+fabr	XP_046419047.1	851
+simi	XP_046738672.1	604

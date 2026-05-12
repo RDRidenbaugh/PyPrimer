@@ -1,0 +1,6 @@
+# OG_5369	LOC124214569	PI-PLC X domain-containing protein 3 isoform X1	NA
+pine	XP_046472959.1	649
+leco	XP_046586918.1	649
+virg	XP_046602938.1	649
+fabr	XP_046410206.1	649
+simi	XP_046752754.1	547

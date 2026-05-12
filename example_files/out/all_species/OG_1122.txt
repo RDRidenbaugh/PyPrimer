@@ -1,0 +1,6 @@
+# OG_1122	LOC124223433	probable malonyl-CoA-acyl carrier protein transacylase, mitochondrial	NA
+pine	XP_046491366.1	836
+leco	XP_015520822.1	836
+virg	XP_046627767.1	836
+fabr	XP_046434859.1	836
+simi	XP_046750961.1	421

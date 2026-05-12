@@ -1,0 +1,6 @@
+# OG_2510	LOC124215636	peptide deformylase, mitochondrial-like	NA
+pine	XP_046475212.1	615	575
+leco	XP_015523229.2	614	575
+virg	XP_046611344.1	615	575
+fabr	XP_046419133.1	615	574
+simi	XP_046740017.1	658	372

@@ -1,0 +1,6 @@
+# OG_1310	LOC124210808	mitochondrial import inner membrane translocase subunit Tim23 isoform X1	NA
+pine	XP_046465138.1	96	725	213	1394
+leco	XP_015520904.1	96	220	213	1393
+virg	XP_046603034.1	96	220	213	1390
+fabr	XP_046409549.1	96	220	213	1390
+simi	XP_046736358.1	96	223	213	1388

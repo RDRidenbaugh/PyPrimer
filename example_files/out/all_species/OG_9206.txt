@@ -1,0 +1,6 @@
+# OG_9206	LOC124216019	probable tRNA N6-adenosine threonylcarbamoyltransferase, mitochondrial	NA
+pine	XP_046475995.1	107	410	73	80
+leco	XP_015523744.2	107	413	73	80
+virg	XP_046613400.1	106	410	73	80
+fabr	XP_046419822.1	107	414	73	81
+simi	XP_046741760.1	94	140	73	82

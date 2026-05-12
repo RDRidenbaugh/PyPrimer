@@ -1,0 +1,6 @@
+# OG_8875	LOC124214470	engulfment and cell motility protein 1-like	NA
+pine	XP_046472703.1	932	436
+leco	XP_015520736.2	932	437
+virg	XP_046609911.1	931	436
+fabr	XP_046416668.1	931	433
+simi	XP_046738273.1	148	212
