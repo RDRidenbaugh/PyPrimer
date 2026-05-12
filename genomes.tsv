@@ -1,0 +1,9 @@
+# PyPrimer genomes file
+# Tab-separated, no header. Lines beginning with '#' are ignored.
+# Columns: label <TAB> feature_table_path <TAB> gff_path
+# Row order determines genome index used throughout (FST filter uses index 1).
+pine	example_files/feature_table/GCF_021155775.1_iyNeoPine1.1_feature_table.txt	example_files/genome_gff/GCF_021155775.1_iyNeoPine1.1_genomic.gff
+leco	example_files/feature_table/GCF_021901455.1_iyNeoLeco1.1_feature_table.txt	example_files/genome_gff/GCF_021901455.1_iyNeoLeco1.1_genomic.gff
+virg	example_files/feature_table/GCF_021901495.1_iyNeoVirg1.1_feature_table.txt	example_files/genome_gff/GCF_021901495.1_iyNeoVirg1.1_genomic.gff
+fabr	example_files/feature_table/GCF_021155785.1_iyNeoFabr1.1_feature_table.txt	example_files/genome_gff/GCF_021155785.1_iyNeoFabr1.1_genomic.gff
+simi	example_files/feature_table/GCF_021155765.1_iyDipSimi1.1_feature_table.txt	example_files/genome_gff/GCF_021155765.1_iyDipSimi1.1_genomic.gff

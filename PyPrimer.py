@@ -1,3 +1,4 @@
+import argparse
 import sys
 import os
 from re import split, findall
@@ -5,92 +6,167 @@ from itertools import combinations
 
 
 # =============================================================================
-# Control file parser
+# CLI and genomes TSV parser
 # =============================================================================
 
-def parse_control(ctrl_path):
-    """Parse the PyPrimer control file and return a configuration dictionary.
+def parse_args():
+    """Define and parse command-line arguments.
 
-    Control file format (key = value, # for comments):
-
-        num_genomes     = 5
-        genome_0        = pine | path/to/feature_table.txt | path/to/genome.gff
-        genome_1        = leco | path/to/feature_table.txt | path/to/genome.gff
-        ...
-        broccoli_table  = path/to/table_OGs_protein_names.txt
-        use_fst         = True
-        fst_table       = path/to/fst_file.txt
-        fst_cutoff      = 0.75
-        focal_pair      = pine,leco          # only used when all_genomes = False
-        all_genomes     = True
-        min_intron_diff = 100
-        max_intron_len  = 1100
-        output_dir      = path/to/output/
-        annotation_type = CDS
+    Returns
+    -------
+    argparse.Namespace
+        Parsed arguments with cross-argument validation applied.
     """
-    config = {}
-    with open(ctrl_path, "r") as ctrl:
-        for line in ctrl:
+    parser = argparse.ArgumentParser(
+        prog="PyPrimer",
+        description=(
+            "Identify orthogroups with diagnostic intron length differences "
+            "across multiple genomes for PCR primer design."
+        ),
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+
+    # -- Required ---------------------------------------------------------------
+    parser.add_argument(
+        "--genomes",
+        required=True,
+        metavar="TSV",
+        help=(
+            "Tab-separated file listing genomes to examine. "
+            "Columns (no header): label, feature_table_path, gff_path. "
+            "Row order determines genome index used throughout."
+        ),
+    )
+    parser.add_argument(
+        "--broccoli-table",
+        required=True,
+        metavar="FILE",
+        help="Broccoli orthogroup protein-name table "
+             "(table_OGs_protein_names.txt).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        required=True,
+        metavar="DIR",
+        help="Directory for output files (created if absent).",
+    )
+
+    # -- Annotation type --------------------------------------------------------
+    parser.add_argument(
+        "--annotation-type",
+        default="CDS",
+        choices=["CDS", "mRNA"],
+        help="Annotation feature type to use when building databases.",
+    )
+
+    # -- FST filtering ----------------------------------------------------------
+    fst_group = parser.add_argument_group("FST filtering (optional)")
+    fst_group.add_argument(
+        "--use-fst",
+        action="store_true",
+        help=(
+            "Enable FST-based filtering of orthogroups. "
+            "Requires --fst-table and --fst-cutoff. "
+            "Uses the second genome in --genomes as the FST reference."
+        ),
+    )
+    fst_group.add_argument(
+        "--fst-table",
+        metavar="FILE",
+        help="Population FST metadata file.",
+    )
+    fst_group.add_argument(
+        "--fst-cutoff",
+        type=float,
+        default=0.75,
+        metavar="FLOAT",
+        help="Minimum FST value required to retain an orthogroup.",
+    )
+
+    # -- Pairwise comparison mode -----------------------------------------------
+    mode_group = parser.add_argument_group("Pairwise comparison mode")
+    mode_ex = mode_group.add_mutually_exclusive_group()
+    mode_ex.add_argument(
+        "--all-genomes",
+        action="store_true",
+        default=True,
+        help="Compare intron lengths across all pairwise genome combinations "
+             "(default).",
+    )
+    mode_ex.add_argument(
+        "--focal-pair",
+        nargs=2,
+        metavar=("LABEL_A", "LABEL_B"),
+        help="Compare intron lengths only between two named genomes "
+             "(e.g. --focal-pair pine leco). Overrides --all-genomes.",
+    )
+
+    # -- Intron length filters --------------------------------------------------
+    intron_group = parser.add_argument_group("Intron length filters")
+    intron_group.add_argument(
+        "--min-intron-diff",
+        type=int,
+        default=100,
+        metavar="INT",
+        help="Minimum intron length difference (bp) required to flag an "
+             "orthogroup.",
+    )
+    intron_group.add_argument(
+        "--max-intron-len",
+        type=int,
+        default=1100,
+        metavar="INT",
+        help="Maximum intron length (bp); both introns in a pair must be "
+             "shorter than this value.",
+    )
+
+    args = parser.parse_args()
+
+    # -- Cross-argument validation ----------------------------------------------
+    if args.use_fst and not args.fst_table:
+        parser.error("--use-fst requires --fst-table.")
+
+    # --focal-pair overrides the --all-genomes default.
+    if args.focal_pair:
+        args.all_genomes = False
+
+    return args
+
+
+def parse_genomes_tsv(path):
+    """Parse the genomes TSV into an ordered list of genome dicts.
+
+    Expected format (tab-separated, no header, # lines ignored):
+        label <TAB> feature_table_path <TAB> gff_path
+
+    Parameters
+    ----------
+    path : str
+        Path to the genomes TSV file.
+
+    Returns
+    -------
+    list of dict
+        Each dict has keys: 'label', 'ft_path', 'gff_path'.
+    """
+    genomes = []
+    with open(path, "r") as f:
+        for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            if "=" not in line:
-                continue
-            key, _, value = line.partition("=")
-            config[key.strip()] = value.strip()
-
-    # --- required fields -------------------------------------------------------
-    required = [
-        "num_genomes", "broccoli_table", "use_fst",
-        "all_genomes", "min_intron_diff", "max_intron_len", "output_dir",
-    ]
-    for field in required:
-        if field not in config:
-            raise ValueError(f"Control file is missing required field: '{field}'")
-
-    # --- genome entries ---------------------------------------------------------
-    num_genomes = int(config["num_genomes"])
-    genomes = []
-    for i in range(num_genomes):
-        gkey = f"genome_{i}"
-        if gkey not in config:
-            raise ValueError(f"Control file is missing genome entry: '{gkey}'")
-        parts = [p.strip() for p in config[gkey].split("|")]
-        if len(parts) != 3:
-            raise ValueError(
-                f"'{gkey}' must have exactly 3 pipe-separated fields: "
-                "label | feature_table | gff"
-            )
-        genomes.append({"label": parts[0], "ft_path": parts[1], "gff_path": parts[2]})
-    config["genomes"] = genomes
-
-    # --- type coercions --------------------------------------------------------
-    config["num_genomes"]     = num_genomes
-    config["use_fst"]         = config["use_fst"].strip().lower() == "true"
-    config["all_genomes"]     = config["all_genomes"].strip().lower() == "true"
-    config["min_intron_diff"] = int(config["min_intron_diff"])
-    config["max_intron_len"]  = int(config["max_intron_len"])
-    config["annotation_type"] = config.get("annotation_type", "CDS").strip()
-
-    if config["use_fst"]:
-        for field in ("fst_table", "fst_cutoff"):
-            if field not in config:
+            cols = line.split("\t")
+            if len(cols) != 3:
                 raise ValueError(
-                    f"'use_fst = True' requires field '{field}' in the control file."
+                    f"Genomes TSV line {line_num} has {len(cols)} column(s); "
+                    "expected exactly 3 (label, feature_table, gff)."
                 )
-        config["fst_cutoff"] = float(config["fst_cutoff"])
-
-    if not config["all_genomes"]:
-        if "focal_pair" not in config:
-            raise ValueError(
-                "'all_genomes = False' requires a 'focal_pair' field "
-                "(e.g. focal_pair = pine,leco)."
+            genomes.append(
+                {"label": cols[0].strip(), "ft_path": cols[1].strip(), "gff_path": cols[2].strip()}
             )
-        config["focal_pair"] = [s.strip() for s in config["focal_pair"].split(",")]
-        if len(config["focal_pair"]) != 2:
-            raise ValueError("'focal_pair' must name exactly 2 genome labels.")
-
-    return config
+    if not genomes:
+        raise ValueError(f"No genome entries found in '{path}'.")
+    return genomes
 
 
 # =============================================================================
@@ -416,67 +492,74 @@ def intron_output(intron_dict, output_dir, genome_labels, ft_dbs):
                         f.write(str(val) + "\n")
 
 
+
 # =============================================================================
 # Main
 # =============================================================================
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python PyPrimer.py <control_file>")
-        sys.exit(1)
+    args = parse_args()
 
-    ctrl_path = sys.argv[1]
-    print(f"Reading control file: {ctrl_path}")
-    config = parse_control(ctrl_path)
+    # Load genome table.
+    genomes = parse_genomes_tsv(args.genomes)
+    genome_labels = [g["label"] for g in genomes]
+    print(f"Genomes ({len(genomes)}): {', '.join(genome_labels)}")
 
-    genome_labels = [g["label"] for g in config["genomes"]]
-    annot = config["annotation_type"]
-    print(f"Genomes ({config['num_genomes']}): {', '.join(genome_labels)}")
+    # Validate focal-pair labels against the genome table.
+    if args.focal_pair:
+        for label in args.focal_pair:
+            if label not in genome_labels:
+                sys.exit(
+                    f"Error: focal-pair label '{label}' not found in genomes TSV. "
+                    f"Available labels: {', '.join(genome_labels)}"
+                )
 
     # Build feature-table and exon databases for every genome.
     print("Building feature-table databases...")
-    ft_dbs = [build_db_ft(g["ft_path"], annot) for g in config["genomes"]]
+    ft_dbs = [build_db_ft(g["ft_path"], args.annotation_type) for g in genomes]
 
     print("Building exon/intron databases...")
-    exon_dbs = [build_db_exon(g["gff_path"], annot) for g in config["genomes"]]
+    exon_dbs = [build_db_exon(g["gff_path"], args.annotation_type) for g in genomes]
 
     # Load Broccoli orthogroup table.
     print("Loading orthogroup names...")
-    og_names = name(config["broccoli_table"])
+    og_names = name(args.broccoli_table)
 
-    # Isoform filtering — keep longest per species.
+    # Isoform filtering -- keep longest isoform per species.
     print("Filtering isoforms...")
     og_names = OG_isoform_filter(og_names, ft_dbs)
 
     # Optional FST filtering.
-    if config["use_fst"]:
+    if args.use_fst:
         print("Applying FST filter...")
-        fst_db = fst_metadata(config["fst_table"])
-        # FST filtering uses the second genome (index 1) as the focal reference,
+        fst_db = fst_metadata(args.fst_table)
+        # Uses the second genome (index 1) as the FST reference species,
         # matching the original script's behaviour.
-        og_names = OG_fst_filter(og_names, fst_db, config["fst_cutoff"], ft_dbs[1])
+        og_names = OG_fst_filter(og_names, fst_db, args.fst_cutoff, ft_dbs[1])
 
     # Pairwise intron comparison.
-    mode = "all" if config["all_genomes"] else "focal"
+    mode = "focal" if args.focal_pair else "all"
     focal_indices = None
     if mode == "focal":
-        fp = config["focal_pair"]
-        focal_indices = (genome_labels.index(fp[0]), genome_labels.index(fp[1]))
-        print(f"Focal pair: {fp[0]} vs {fp[1]}")
+        focal_indices = (
+            genome_labels.index(args.focal_pair[0]),
+            genome_labels.index(args.focal_pair[1]),
+        )
+        print(f"Focal pair: {args.focal_pair[0]} vs {args.focal_pair[1]}")
 
     print(f"Running pairwise intron comparison (mode='{mode}')...")
     intron = OG_intron(
         og_names,
         exon_dbs,
-        config["min_intron_diff"],
-        config["max_intron_len"],
+        args.min_intron_diff,
+        args.max_intron_len,
         mode,
         focal_indices,
     )
 
     # Write output.
-    print(f"Writing output to: {config['output_dir']}")
-    intron_output(intron, config["output_dir"], genome_labels, ft_dbs)
+    print(f"Writing output to: {args.output_dir}")
+    intron_output(intron, args.output_dir, genome_labels, ft_dbs)
     print("Done.")
 
 
