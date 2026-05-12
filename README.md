@@ -13,6 +13,8 @@
                ░░░░░░                                                                   
 ```
 
+UNDER CONSTRUCTION: Updating README.md to refelect the implementation of a generalized arg workflow in preperation for submission to bioconda. 
+
 PyPrimer is bioinformatic pipeline designed to identify intron length variation between multiple species for the purpose of designing diagnostic multiplex PCR primers. Originally implemented in *Neodiprion* sawflies, the methodology can be applied to any system with a NCBI annotated reference genome.
 
 PyPrimer was written in Python3 and requires the following input files to function:
