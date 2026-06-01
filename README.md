@@ -40,16 +40,16 @@ pyprimer --genomes genomes.tsv \
          --focal-pair pine leco \
          --min-intron-diff 100 --max-intron-len 1100
 ```
-Mandatory arguments:
---genomes: path to the tab-seperate value file idetifying the number of species being considered, and the paths to their respecitive feature tables and .gff files.
---broccoli-table: path to the "table_OGs_protein_names.txt" file output by broccoli in the "dir_step3" directory. 
---output-dir out: path to your desired output directory. 
---min-intron-diff & --max-intron-lex: The minumum and maximum intron length desired between any two species.
+Mandatory arguments:\
+--genomes: path to the tab-seperate value file idetifying the number of species being considered, and the paths to their respecitive feature tables and .gff files.\
+--broccoli-table: path to the "table_OGs_protein_names.txt" file output by broccoli in the "dir_step3" directory.\
+--output-dir out: path to your desired output directory.\
+--min-intron-diff & --max-intron-lex: The minumum and maximum intron length desired between any two species.\
 
-Optional Arguments:
---use-fst: Arugment to enable FST filtering.
---fst-table, --fst-cutoff: path to the file containing windowed FST values, along with the minimum desired FST threshold. Used in tandem with --use-fst.
---focal-pair: Argument to only search between two focal species. 
+Optional Arguments:\
+--use-fst: Arugment to enable FST filtering.\
+--fst-table, --fst-cutoff: path to the file containing windowed FST values, along with the minimum desired FST threshold. Used in tandem with --use-fst.\
+--focal-pair: Argument to only search between two focal species.\
 
 
 **References**
