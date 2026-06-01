@@ -22,7 +22,7 @@ PyPrimer was written in Python3.8+ and requires the following input files to fun
 
 PyPrimer can optionally filter orthogroup candidates using genome wide FST population data for focal species. The original implementation focused on intron variation between  *N. lecontei* and *N. pinetum* from Glover et al. (2024) using VCFtools.
 
-PyPrimer can be run as a tutorial using files in the example_file directory. Feature tables and GFF files will need to be downloaded from the [NCBI ftp](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/021/901/455/GCF_021901455.1_iyNeoLeco1.1/) servers for each species.
+PyPrimer can be run as a tutorial using files from the example_file directory on GitHub. Feature tables and GFF files will need to be downloaded from the [NCBI ftp](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/021/901/455/GCF_021901455.1_iyNeoLeco1.1/) servers for each species.
 
 **Usage**
 ```
