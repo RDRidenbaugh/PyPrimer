@@ -34,7 +34,7 @@ Repository = "https://github.com/RDRidenbaugh/PyPrimer"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["pyprimer_ilps*"]
+include = ["pyprimer*"]
 
 [project.scripts]
 pyprimer = "pyprimer.pyprimer_ilps:main"

@@ -5,18 +5,11 @@ from re import split, findall
 from itertools import combinations
 
 
-# =============================================================================
 # CLI and genomes TSV parser
 # =============================================================================
 
 def parse_args():
-    """Define and parse command-line arguments.
-
-    Returns
-    -------
-    argparse.Namespace
-        Parsed arguments with cross-argument validation applied.
-    """
+    """Define and parse command-line arguments."""
     parser = argparse.ArgumentParser(
         prog="PyPrimer",
         description=(
@@ -49,6 +42,25 @@ def parse_args():
         required=True,
         metavar="DIR",
         help="Directory for output files (created if absent).",
+    )
+
+    parser.add_argument(
+        "--min-intron-diff",
+        required=True,
+        type=int,
+        default=100,
+        metavar="INT",
+        help="Minimum intron length difference (bp) required to flag an "
+             "orthogroup.",
+    )
+    parser.add_argument(
+        "--max-intron-len",
+        required=True,
+        type=int,
+        default=1100,
+        metavar="INT",
+        help="Maximum intron length (bp); both introns in a pair must be "
+             "shorter than this value.",
     )
 
     # -- Annotation type --------------------------------------------------------
@@ -84,7 +96,7 @@ def parse_args():
     )
 
     # -- Pairwise comparison mode -----------------------------------------------
-    mode_group = parser.add_argument_group("Pairwise comparison mode")
+    mode_group = parser.add_argument_group("Pairwise comparison mode (optional)")
     mode_ex = mode_group.add_mutually_exclusive_group()
     mode_ex.add_argument(
         "--all-genomes",
@@ -101,25 +113,6 @@ def parse_args():
              "(e.g. --focal-pair pine leco). Overrides --all-genomes.",
     )
 
-    # -- Intron length filters --------------------------------------------------
-    intron_group = parser.add_argument_group("Intron length filters")
-    intron_group.add_argument(
-        "--min-intron-diff",
-        type=int,
-        default=100,
-        metavar="INT",
-        help="Minimum intron length difference (bp) required to flag an "
-             "orthogroup.",
-    )
-    intron_group.add_argument(
-        "--max-intron-len",
-        type=int,
-        default=1100,
-        metavar="INT",
-        help="Maximum intron length (bp); both introns in a pair must be "
-             "shorter than this value.",
-    )
-
     args = parser.parse_args()
 
     # -- Cross-argument validation ----------------------------------------------
@@ -134,21 +127,7 @@ def parse_args():
 
 
 def parse_genomes_tsv(path):
-    """Parse the genomes TSV into an ordered list of genome dicts.
-
-    Expected format (tab-separated, no header, # lines ignored):
-        label <TAB> feature_table_path <TAB> gff_path
-
-    Parameters
-    ----------
-    path : str
-        Path to the genomes TSV file.
-
-    Returns
-    -------
-    list of dict
-        Each dict has keys: 'label', 'ft_path', 'gff_path'.
-    """
+    """Parse the genomes TSV into an ordered list of genome dicts."""
     genomes = []
     with open(path, "r") as f:
         for line_num, line in enumerate(f, 1):
@@ -169,7 +148,6 @@ def parse_genomes_tsv(path):
     return genomes
 
 
-# =============================================================================
 # Database builders
 # =============================================================================
 
@@ -279,7 +257,6 @@ def fst_metadata(path):
     return temp_dict
 
 
-# =============================================================================
 # OG filtering / isoform handling
 # =============================================================================
 
@@ -295,15 +272,7 @@ def longest(xp_list, db_ft):
 
 
 def OG_isoform_filter(og_dict, ft_dbs):
-    """Retain only the longest isoform per species within each orthogroup.
-
-    Parameters
-    ----------
-    og_dict : dict
-        Orthogroup dictionary produced by name().
-    ft_dbs : list of dict
-        Feature-table databases in genome order matching og_dict columns.
-    """
+    """Retain only the longest isoform per species within each orthogroup."""
     temp_dict = {}
     num_sp = len(ft_dbs)
     for key, sp_lists in og_dict.items():
@@ -352,7 +321,6 @@ def OG_fst_filter(og_dict, fst, cutoff, focal_ft_db):
     return temp_dict
 
 
-# =============================================================================
 # Intron pairwise comparison
 # =============================================================================
 
@@ -401,7 +369,6 @@ def OG_intron(og_dict, exon_dbs, min_diff, max_len, mode, focal_indices=None):
     return temp_dict
 
 
-# =============================================================================
 # Output
 # =============================================================================
 
@@ -436,7 +403,6 @@ def intron_output(intron_dict, output_dir, genome_labels, ft_dbs):
 
 
 
-# =============================================================================
 # Main
 # =============================================================================
 
