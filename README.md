@@ -16,15 +16,21 @@
 PyPrimer is bioinformatic pipeline designed to identify intron length variation between multiple species for the purpose of designing diagnostic multiplex PCR primers. Originally implemented in *Neodiprion* sawflies, the methodology can be applied to any system with a NCBI annotated reference genome.
 
 PyPrimer was written in Python3.8+ and requires the following input files to function:
-- table_OGs_protein_names.txt - Orthologous groups inferred using [Broccoli](https://github.com/rderelle/Broccoli) (Derelle et al., 2020)
-- GCF_021901455.1_iyNeoLeco1.1_feature_table.txt - NCBI feature tables in tab delimited format
-- GCF_021901455.1_iyNeoLeco1.1_genomic.gff - NCBI GFF files
+- Orthologous groups inferred for a set of species using [Broccoli](https://github.com/rderelle/Broccoli) (Derelle et al., 2020)
+- NCBI feature tables in tab delimited format for all species within the orthologous groups.
+- NCBI GFF files.
 
 PyPrimer can optionally filter orthogroup candidates using genome wide FST population data for focal species. The original implementation focused on intron variation between  *N. lecontei* and *N. pinetum* from Glover et al. (2024) using VCFtools.
 
 PyPrimer can be run as a tutorial using files from the example_file directory on GitHub. Feature tables and GFF files will need to be downloaded from the [NCBI ftp](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/021/901/455/GCF_021901455.1_iyNeoLeco1.1/) servers for each species.
 
-**Usage**
+**Install**
+
+```
+pip install pyprimer-ilps
+```
+
+**Docs**
 ```
 # All genomes, no FST filter
 pyprimer --genomes genomes.tsv \
@@ -40,6 +46,7 @@ pyprimer --genomes genomes.tsv \
          --focal-pair pine leco \
          --min-intron-diff 100 --max-intron-len 1100
 ```
+
 Mandatory arguments:\
 --genomes: path to the tab-seperate value file idetifying the number of species being considered, and the paths to their respecitive feature tables and .gff files.\
 --broccoli-table: path to the "table_OGs_protein_names.txt" file output by broccoli in the "dir_step3" directory.\

@@ -331,19 +331,7 @@ def overlap(gene_start, gene_stop, fst_start, fst_stop):
 
 
 def OG_fst_filter(og_dict, fst, cutoff, focal_ft_db):
-    """Keep orthogroups overlapping high-FST windows for the focal species.
-
-    Parameters
-    ----------
-    og_dict : dict
-        Filtered orthogroup dictionary.
-    fst : dict
-        FST metadata produced by fst_metadata().
-    cutoff : float
-        Minimum FST value to retain an orthogroup.
-    focal_ft_db : dict
-        Feature-table database for the focal (FST-reference) species.
-    """
+    """Keep orthogroups overlapping high-FST windows for the focal species."""
     temp_dict = {}
     for key, og in og_dict.items():
         for region, fst_vals in fst.items():
@@ -369,24 +357,7 @@ def OG_fst_filter(og_dict, fst, cutoff, focal_ft_db):
 # =============================================================================
 
 def pairwise_intron(og_accessions, exon_dbs, min_diff, max_len, mode, focal_indices=None):
-    """Check whether any intron pair exceeds the minimum length difference.
-
-    Parameters
-    ----------
-    og_accessions : tuple
-        Per-species accession IDs for one orthogroup.
-    exon_dbs : list of dict
-        Exon databases in genome order.
-    min_diff : int
-        Minimum intron length difference required to flag an OG.
-    max_len : int
-        Maximum intron length; both introns must be shorter than this.
-    mode : str
-        "focal" — compare only the focal species pair;
-        "all"   — compare all pairwise species combinations.
-    focal_indices : tuple of int, optional
-        Indices of the two focal species when mode == "focal".
-    """
+    """Check whether any intron pair exceeds the minimum length difference."""
     try:
         intron_lists = [exon_dbs[i][og_accessions[i]][1] for i in range(len(exon_dbs))]
         num_introns = len(intron_lists[0])
@@ -415,23 +386,7 @@ def pairwise_intron(og_accessions, exon_dbs, min_diff, max_len, mode, focal_indi
 
 
 def OG_intron(og_dict, exon_dbs, min_diff, max_len, mode, focal_indices=None):
-    """Filter orthogroups by pairwise intron length differences.
-
-    Parameters
-    ----------
-    og_dict : dict
-        Isoform-filtered (and optionally FST-filtered) orthogroup dict.
-    exon_dbs : list of dict
-        Exon databases in genome order.
-    min_diff : int
-        Minimum intron length difference.
-    max_len : int
-        Maximum allowed intron length.
-    mode : str
-        "focal" or "all" — passed directly to pairwise_intron().
-    focal_indices : tuple of int, optional
-        Required when mode == "focal".
-    """
+    """Filter orthogroups by pairwise intron length differences."""
     temp_dict = {}
     num_sp = len(exon_dbs)
     for key, og in og_dict.items():
@@ -451,19 +406,7 @@ def OG_intron(og_dict, exon_dbs, min_diff, max_len, mode, focal_indices=None):
 # =============================================================================
 
 def intron_output(intron_dict, output_dir, genome_labels, ft_dbs):
-    """Write one text file per retained orthogroup.
-
-    Parameters
-    ----------
-    intron_dict : dict
-        Result of OG_intron().
-    output_dir : str
-        Directory for output files (created if absent).
-    genome_labels : list of str
-        Species labels in genome order.
-    ft_dbs : list of dict
-        Feature-table databases in genome order.
-    """
+    """Write one text file per retained orthogroup."""
     os.makedirs(output_dir, exist_ok=True)
     ref_db = ft_dbs[0]
 
