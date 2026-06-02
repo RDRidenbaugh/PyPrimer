@@ -7,9 +7,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyprimer-{{ version }}.tar.gz
-  # sha256 will be filled in after PyPI upload — run:
-  # curl -s https://pypi.org/pypi/pyprimer/{{ version }}/json | python -c "import sys,json; [print(f['digests']['sha256']) for f in json.load(sys.stdin)['urls'] if f['packagetype']=='sdist']"
-
+  sha256: 865d9cf6de71f13cfb8c971150b0d9ea82d783b70eb146f43afce8ec51070d7b
+  
 build:
   noarch: python
   number: 0
