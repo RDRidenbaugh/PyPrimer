@@ -1,9 +1,9 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyprimer"
+name = "pyprimer-ilps"
 version = "0.1.0"
 description = "A bioinformatic pipeline for identifying intron length variation across species to design diagnostic multiplex PCR primers."
 readme = "README.md"
@@ -34,4 +34,4 @@ Repository = "https://github.com/RDRidenbaugh/PyPrimer"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["pyprimer*"]
+include = ["pyprimer_ilps*"]

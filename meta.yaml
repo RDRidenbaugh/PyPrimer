@@ -1,4 +1,4 @@
-{% set name = "pyprimer" %}
+{% set name = "pyprimer-ilps" %}
 {% set version = "0.1.0" %}
 
 package:
@@ -25,7 +25,7 @@ requirements:
 
 test:
   imports:
-    - pyprimer
+    - pyprimer_ilps
   commands:
     - pip check
   requires:
@@ -35,7 +35,7 @@ about:
   home: https://github.com/RDRidenbaugh/PyPrimer
   summary: "A bioinformatic pipeline for intron length variation-based diagnostic multiplex PCR primer design."
   description: |
-    PyPrimer identifies intron length variation between multiple species for
+    PyPrimer-ILPs identifies intron length variation between multiple species for
     the purpose of designing diagnostic multiplex PCR primers. Originally
     implemented in Neodiprion sawflies, the methodology can be applied to
     any system with an NCBI annotated reference genome.
