@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyprimer-ilps"
-version = "0.1.1"
+version = "0.1.2"
 description = "A bioinformatic pipeline for identifying intron length variation across species to design diagnostic multiplex PCR primers."
 readme = "README.md"
 license = { text = "MIT" }
