@@ -6,13 +6,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyprimer-{{ version }}.tar.gz
-  sha256: 865d9cf6de71f13cfb8c971150b0d9ea82d783b70eb146f43afce8ec51070d7b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyprimer_ilps-{{ version }}.tar.gz
+  sha256: 3c77dd6566a5b5405f276a2aced529fa356f35cd45adf5a94546b6b6b5f88ec9
   
 build:
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  run_exports:
+    - {{ pin_subpackage('pyprimer-ilps', max_pin='x') }}
 
 requirements:
   host:
@@ -40,7 +42,7 @@ about:
     any system with an NCBI annotated reference genome.
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   doc_url: https://github.com/RDRidenbaugh/PyPrimer
   dev_url: https://github.com/RDRidenbaugh/PyPrimer
 
