@@ -11,7 +11,7 @@
               ░░██████                                                                  
                ░░░░░░                                                                   
 ```
-[![Anaconda.org](https://img.shields.io/badge/Anaconda.org-0.1.1-blue.svg?style=flat-square)](https://anaconda.org) [![Anaconda.org](
+[![Anaconda.org](https://img.shields.io/badge/Anaconda.org-0.1.2-blue.svg?style=flat-square)](https://anaconda.org) [![Anaconda.org](
 https://anaconda.org/bioconda/pyprimer-ilps/badges/platforms.svg)](https://anaconda.org) [![Anaconda.org](
 https://anaconda.org/bioconda/pyprimer-ilps/badges/license.svg)](https://anaconda.org) 
 
